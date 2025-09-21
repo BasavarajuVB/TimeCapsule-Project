@@ -25,7 +25,7 @@ A modern React application for creating and managing digital time capsules. Pres
 
 1. Clone the repository:
 ```sh
-git clone <YOUR_GIT_URL>
+git clone <https://github.com/BasavarajuVB/TimeCapsule-Project.git>
 cd time-capsule-app
 ```
 
@@ -57,8 +57,8 @@ This project is built with:
 - **Backend**: Firebase (Authentication, Realtime Database)
 - **Authentication**: Firebase Auth (Email/Password, Google Sign-in)
 - **Database**: Firebase Realtime Database
-- **Deployment**: Firebase Hosting
-- **Form Handling**: React Hook Form, Zod validation
+- **Deployment**: Vercel.com
+- **Form Handling**: React Form
 - **Icons**: Lucide React
 - **Routing**: React Router DOM
 
