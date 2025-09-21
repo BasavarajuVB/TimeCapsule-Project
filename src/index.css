@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Digital Time Capsule Design System - Cosmic & Mystical Theme
+All colors MUST be HSL for consistent theming.
+*/
+
+@layer base {
+  :root {
+    /* Cosmic Background Colors */
+    --background: 240 15% 6%;
+    --foreground: 240 20% 95%;
+
+    /* Card & Surface Colors */
+    --card: 240 12% 10%;
+    --card-foreground: 240 15% 90%;
+
+    --popover: 240 12% 8%;
+    --popover-foreground: 240 15% 90%;
+
+    /* Primary - Mystical Purple */
+    --primary: 270 60% 55%;
+    --primary-foreground: 240 20% 95%;
+    --primary-glow: 270 80% 70%;
+
+    /* Secondary - Deep Space Blue */
+    --secondary: 220 50% 25%;
+    --secondary-foreground: 240 15% 90%;
+
+    /* Muted - Subtle Grays */
+    --muted: 240 8% 15%;
+    --muted-foreground: 240 10% 60%;
+
+    /* Accent - Golden Treasure */
+    --accent: 45 80% 60%;
+    --accent-foreground: 240 15% 10%;
+    --accent-glow: 45 90% 70%;
+
+    /* Status Colors */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 240 20% 95%;
+
+    --success: 120 60% 50%;
+    --success-foreground: 240 20% 95%;
+
+    /* Border & Input */
+    --border: 240 12% 18%;
+    --input: 240 12% 12%;
+    --ring: 270 60% 55%;
+
+    /* Design System Tokens */
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-mystic: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(220 50% 35%) 50%, hsl(var(--background)) 100%);
+    --gradient-treasure: linear-gradient(90deg, hsl(var(--accent)) 0%, hsl(45 90% 70%) 100%);
+    
+    /* Shadows & Effects */
+    --shadow-cosmic: 0 10px 40px -10px hsl(var(--primary) / 0.4);
+    --shadow-treasure: 0 8px 32px -8px hsl(var(--accent) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.5);
+    --shadow-golden-glow: 0 0 25px hsl(var(--accent-glow) / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    background: var(--gradient-mystic);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Cosmic button variants */
+  .btn-cosmic {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground;
+    @apply hover:shadow-[var(--shadow-cosmic)] transition-[var(--transition-smooth)];
+    @apply border border-primary/20 backdrop-blur-sm;
+  }
+
+  .btn-treasure {
+    @apply bg-gradient-to-r from-accent to-accent-glow text-accent-foreground;
+    @apply hover:shadow-[var(--shadow-golden-glow)] transition-[var(--transition-bounce)];
+    @apply border border-accent/30;
+  }
+
+  .btn-ghost-cosmic {
+    @apply bg-transparent border border-primary/30 text-primary-foreground;
+    @apply hover:bg-primary/10 hover:border-primary/50 transition-[var(--transition-smooth)];
+  }
+
+  /* Card variants */
+  .card-cosmic {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+    @apply shadow-[var(--shadow-cosmic)] transition-[var(--transition-smooth)];
+  }
+
+  .card-treasure {
+    @apply bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20;
+    @apply shadow-[var(--shadow-treasure)] transition-[var(--transition-smooth)];
+  }
+
+  /* Glow effects */
+  .glow-cosmic {
+    @apply drop-shadow-[var(--shadow-glow)];
+  }
+
+  .glow-treasure {
+    @apply drop-shadow-[var(--shadow-golden-glow)];
+  }
+
+  /* Animated backgrounds */
+  .bg-cosmic-stars {
+    background-image: radial-gradient(2px 2px at 20px 30px, hsl(var(--primary-glow)), transparent),
+                      radial-gradient(2px 2px at 40px 70px, hsl(var(--accent-glow)), transparent),
+                      radial-gradient(1px 1px at 90px 40px, hsl(var(--primary)), transparent),
+                      radial-gradient(1px 1px at 130px 80px, hsl(var(--accent)), transparent),
+                      radial-gradient(2px 2px at 160px 30px, hsl(var(--primary-glow)), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: cosmic-drift 20s linear infinite;
+  }
+
+  @keyframes cosmic-drift {
+    from { background-position: 0 0; }
+    to { background-position: -200px 0; }
+  }
+}
