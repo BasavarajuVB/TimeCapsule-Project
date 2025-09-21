@@ -7,8 +7,12 @@ A modern React application for creating and managing digital time capsules. Pres
 - Create digital time capsules with photos, messages, and videos
 - Set custom unlock dates for your capsules
 - Secure storage until the specified date
+- User authentication with Google and email/password
+- Real-time database integration
 - Beautiful cosmic-themed UI
 - Responsive design for all devices
+- Advanced filtering and search capabilities
+- Contact form with validation
 
 ## Getting Started
 
@@ -48,11 +52,15 @@ npm run dev
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Frontend**: Vite, React, JavaScript
+- **UI Components**: shadcn-ui, Tailwind CSS
+- **Backend**: Firebase (Authentication, Realtime Database)
+- **Authentication**: Firebase Auth (Email/Password, Google Sign-in)
+- **Database**: Firebase Realtime Database
+- **Deployment**: Firebase Hosting
+- **Form Handling**: React Hook Form, Zod validation
+- **Icons**: Lucide React
+- **Routing**: React Router DOM
 
 ## Deployment
 
@@ -71,6 +79,16 @@ npm run build
 
 The built files will be in the `dist` directory, ready for deployment.
 
+## Firebase Setup
+
+This project uses Firebase for authentication and database. To set up Firebase:
+
+1. Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)
+2. Enable Authentication with Email/Password and Google providers
+3. Create a Realtime Database
+4. Copy your Firebase config to `src/lib/firebase.js`
+5. Update security rules for your database
+
 ## Contributing
 
 1. Fork the repository
@@ -78,3 +96,15 @@ The built files will be in the `dist` directory, ready for deployment.
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## Developer
+
+**Developed by BasavarajuVB** - Fullstack Developer at Web3Today
+
+- **LinkedIn**: [Basavaraju VB](https://www.linkedin.com/in/basavaraju-vb/)
+- **GitHub**: [BasavarajuVB](https://github.com/BasavarajuVB)
+- **Repository**: [TimeCapsule-Project](https://github.com/BasavarajuVB/TimeCapsule-Project.git)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
